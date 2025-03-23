@@ -1,0 +1,9 @@
+12345678912, 42 AHF 647, 2014-02-14, Yoldan çıkma, 10000 TL, Kaporta, Camlar, Lastikler ve Jantlar
+12345678912, 42 AHF 647, 2018-08-29, Park halinde çarpma, 8000 TL, Arka Lambalar, Farlar, Kaporta
+12345612345, 34 AAA 123, 2017-01-13, Zincirleme kaza, 12000 TL, Fren Sistemi, İç Aksam, Elektrik Aksamı, Direksiyon Sistemi
+12345612345, 34 SSS 123, 2023-09-30, Çarpışma, 30000 TL, Kaporta, Vites Sistemi, Motor Parçaları
+12345612345, 34 SSS 123, 2021-12-09, Hareket halindeki araçtan düşen cisim, 1000 TL, Camlar
+12345612345, 34 SSS 123, 2024-03-08, Sabit nesneye çarpma, 7500 TL, Kaporta, Farlar
+12345678912, 42 AHF 647, 2025-01-08, Zincirleme kaza, 4000 TL, Kaporta, Fren Sistemi
+12345678912, 42 AHF 647, 2025-02-03, Devrilme, 20000 TL, Kaporta, Camlar, Lastikler ve Jantlar
+12345678912, 42 AHF 647, 2025-02-05, Zincirleme kaza, 40000 TL, Kaporta, Farlar, Fren Sistemi

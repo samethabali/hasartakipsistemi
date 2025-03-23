@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="414.0" prefWidth="600.0" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hasartakipjava.HasarEkleEkraniController">
+    <Label fx:id="lb_uyari" alignment="CENTER" contentDisplay="CENTER" layoutX="174.0" layoutY="381.0" prefHeight="18.0" prefWidth="252.0" textAlignment="CENTER" />
+    <Label fx:id="lb_maliyet" layoutX="196.0" layoutY="306.0" text="Maliyet:" />
+    <Label fx:id="lb_hasarliParca" layoutX="138.0" layoutY="95.0" text="Hasarlı Parçalar:" />
+    <Label fx:id="lb_kazaNedeni" layoutX="160.0" layoutY="57.0" text="Kaza Nedeni:" />
+    <Label fx:id="lb_kazaTarihi" layoutX="170.0" layoutY="16.0" text="Kaza Tarihi:" />
+    <ChoiceBox id="Seçenek 1, Seçenek 2, Seçenek 3" fx:id="cb_kazaNedeni" layoutX="272.0" layoutY="53.0" prefHeight="28.0" prefWidth="179.0" />
+    <DatePicker fx:id="dp_tarih" layoutX="272.0" layoutY="10.0" promptText="Tarih Seçiniz" />
+    <ChoiceBox id="Seçenek 1, Seçenek 2, Seçenek 3" fx:id="cb_hasarliParca" layoutX="272.0" layoutY="90.0" prefHeight="28.0" prefWidth="179.0" />
+    <TextField fx:id="tf_maliyet" layoutX="272.0" layoutY="300.0" prefHeight="26.0" prefWidth="150.0" />
+    <Label fx:id="lb_tl" layoutX="434.0" layoutY="306.0" text="TL" />
+    <Button fx:id="bt_arti" layoutX="462.0" layoutY="89.0" minWidth="22.0" mnemonicParsing="false" onAction="#onAddChoiceBox" prefHeight="30.0" prefWidth="38.0" text="+" />
+    <Button fx:id="bt_kaydet" layoutX="327.0" layoutY="348.0" mnemonicParsing="false" onAction="#onKaydetButtonClick" text="Kaydet" />
+    <ListView fx:id="lv_hasarliparca" layoutX="272.0" layoutY="125.0" prefHeight="160.0" prefWidth="179.0" />
+</AnchorPane>

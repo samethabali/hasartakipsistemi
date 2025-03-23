@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="418.0" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hasartakipjava.LoginController">
+    <Label layoutX="25.0" layoutY="84.0" prefHeight="23.0" prefWidth="146.0" text="TC Kimlik Numarası:" textAlignment="CENTER" />
+    <Label layoutX="124.0" layoutY="125.0" prefHeight="18.0" prefWidth="47.0" text="Plaka:" />
+    <TextField fx:id="tcgiris" layoutX="179.0" layoutY="83.0" />
+    <TextField fx:id="plakagiris" layoutX="179.0" layoutY="121.0" />
+    <Button fx:id="girisbuton" layoutX="303.0" layoutY="169.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="25.0" prefWidth="55.0" text="Giriş" />
+    <Button fx:id="geridonbuton" layoutX="209.0" layoutY="169.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Geri Dön" />
+    <Label fx:id="hatalabel" alignment="CENTER" layoutX="48.0" layoutY="238.0" prefHeight="17.0" prefWidth="322.0" textAlignment="CENTER" />
+</Pane>

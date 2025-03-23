@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hasartakipjava.HelloController">
+    <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../../../images/background (1).png"/>
+    </ImageView>
+    <Button fx:id="hasareklebuton" layoutX="99.0" layoutY="200.0" mnemonicParsing="false"
+            onAction="#onHasarEkleButtonClick" prefHeight="40.0" prefWidth="98.0" text="Hasar Ekle"/>
+    <Button fx:id="hasarsorgulabuton" layoutX="222.0" layoutY="200.0" mnemonicParsing="false"
+            onAction="#onHasarSorgulaButtonClick" prefHeight="40.0" prefWidth="120.0" text="Hasar Sorgula"/>
+    <Button fx:id="servisislemleributon" layoutX="366.0" layoutY="200.0" mnemonicParsing="false"
+            onAction="#onServisIslemleriButtonClick" prefHeight="40.0" prefWidth="134.0" text="Servis İşlemleri"/>
+    <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="100.0" layoutY="96.0" pickOnBounds="true"
+               preserveRatio="true">
+        <Image url="@../../../images/text.png"/>
+    </ImageView>
+</Pane>

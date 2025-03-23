@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="524.0" prefWidth="727.0" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hasartakipjava.ServisIslemleriEkleController">
+   <Label fx:id="lbAciklama" layoutX="14.0" layoutY="23.0" text="Servis işlemi ve açıklaması ekleyiniz" />
+   <ChoiceBox fx:id="cbParcaSecimi" layoutX="14.0" layoutY="55.0" prefHeight="26.0" prefWidth="126.0" />
+   <TextField fx:id="tfIslemAciklamasi" layoutX="145.0" layoutY="55.0" prefHeight="31.0" prefWidth="166.0" />
+   <Label fx:id="lbHata" layoutX="14.0" layoutY="495.0" prefHeight="18.0" prefWidth="318.0" />
+   <ListView fx:id="lvservisislem" layoutX="14.0" layoutY="88.0" prefHeight="400.0" prefWidth="338.0" />
+   <Pane layoutX="373.0" layoutY="32.0" prefHeight="436.0" prefWidth="337.0">
+      <ChoiceBox fx:id="optionChoiceBox" layoutX="67.0" layoutY="14.0" prefWidth="200" />
+      <ImageView fx:id="carImageView" fitHeight="400" fitWidth="374.0" layoutX="-8.0" layoutY="39.0">
+         <Image url="@../../../images/car_schema.png" />
+      </ImageView>
+      <ImageView fx:id="ontampon" fitHeight="46.0" fitWidth="109.0" layoutX="123.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/ontampon.png" />
+      </ImageView>
+      <ImageView fx:id="kaput" fitHeight="70.0" fitWidth="85.0" layoutX="139.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/kaput.png" />
+      </ImageView>
+      <ImageView fx:id="tavan" fitHeight="65.0" fitWidth="65.0" layoutX="146.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/tavan.png" />
+      </ImageView>
+      <ImageView fx:id="bagaj" fitHeight="41.0" fitWidth="79.0" layoutX="138.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/bagaj.png" />
+      </ImageView>
+      <ImageView fx:id="arkatampon" fitHeight="35.0" fitWidth="108.0" layoutX="123.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/arkatampon.png" />
+      </ImageView>
+      <ImageView fx:id="soloncamurluk" fitHeight="72.0" fitWidth="49.0" layoutX="52.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/soloncamurluk.png" />
+      </ImageView>
+      <ImageView fx:id="solonkapi" fitHeight="68.0" fitWidth="70.0" layoutX="59.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/solonkapi.png" />
+      </ImageView>
+      <ImageView fx:id="solarkacamurluk" fitHeight="60.0" fitWidth="69.0" layoutX="57.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/solarkacamurluk.png" />
+      </ImageView>
+      <ImageView fx:id="sagarkacamurluk" fitHeight="58.0" fitWidth="51.0" layoutX="247.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/sagarkacamurluk.png" />
+      </ImageView>
+      <ImageView fx:id="sagarkakapi" fitHeight="60.0" fitWidth="64.0" layoutX="236.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/sagarkakapi.png" />
+      </ImageView>
+      <ImageView fx:id="sagonkapi" fitHeight="64.0" fitWidth="62.0" layoutX="237.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/sagonkapi.png" />
+      </ImageView>
+      <ImageView fx:id="sagoncamurluk" fitHeight="73.0" fitWidth="49.0" layoutX="255.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/sagoncamurluk.png" />
+      </ImageView>
+      <ImageView fx:id="solarkakapi" fitHeight="64.0" fitWidth="65.0" layoutX="57.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../images/solarkakapi.png" />
+      </ImageView>
+
+
+      <ImageView fx:id="ontamponsari" fitHeight="46.0" fitWidth="109.0" layoutX="123.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/ontamponsari.png" />
+      </ImageView>
+      <ImageView fx:id="kaputsari" fitHeight="70.0" fitWidth="85.0" layoutX="139.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/kaputsari.png" />
+      </ImageView>
+      <ImageView fx:id="tavansari" fitHeight="65.0" fitWidth="65.0" layoutX="146.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/tavansari.png" />
+      </ImageView>
+      <ImageView fx:id="bagajsari" fitHeight="41.0" fitWidth="79.0" layoutX="138.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/bagajsari.png" />
+      </ImageView>
+      <ImageView fx:id="arkatamponsari" fitHeight="35.0" fitWidth="108.0" layoutX="123.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/arkatamponsari.png" />
+      </ImageView>
+      <ImageView fx:id="soloncamurluksari" fitHeight="72.0" fitWidth="49.0" layoutX="52.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/soloncamurluksari.png" />
+      </ImageView>
+      <ImageView fx:id="solonkapisari" fitHeight="68.0" fitWidth="70.0" layoutX="59.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/solonkapisari.png" />
+      </ImageView>
+      <ImageView fx:id="solarkacamurluksari" fitHeight="60.0" fitWidth="69.0" layoutX="57.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/solarkacamurluksari.png" />
+      </ImageView>
+      <ImageView fx:id="sagarkacamurluksari" fitHeight="58.0" fitWidth="51.0" layoutX="247.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/sagarkacamurluksari.png" />
+      </ImageView>
+      <ImageView fx:id="sagarkakapisari" fitHeight="60.0" fitWidth="64.0" layoutX="236.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/sagarkakapisari.png" />
+      </ImageView>
+      <ImageView fx:id="sagonkapisari" fitHeight="64.0" fitWidth="62.0" layoutX="237.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/sagonkapisari.png" />
+      </ImageView>
+      <ImageView fx:id="sagoncamurluksari" fitHeight="73.0" fitWidth="49.0" layoutX="255.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/sagoncamurluksari.png" />
+      </ImageView>
+      <ImageView fx:id="solarkakapisari" fitHeight="64.0" fitWidth="65.0" layoutX="57.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/solarkakapisari.png" />
+      </ImageView>
+
+
+      <ImageView fx:id="ontamponkirmizi" fitHeight="46.0" fitWidth="109.0" layoutX="123.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/ontamponkirmizi.png" />
+      </ImageView>
+      <ImageView fx:id="kaputkirmizi" fitHeight="70.0" fitWidth="85.0" layoutX="139.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/kaputkirmizi.png" />
+      </ImageView>
+      <ImageView fx:id="tavankirmizi" fitHeight="65.0" fitWidth="65.0" layoutX="146.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/tavankirmizi.png" />
+      </ImageView>
+      <ImageView fx:id="bagajkirmizi" fitHeight="41.0" fitWidth="79.0" layoutX="138.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/bagajkirmizi.png" />
+      </ImageView>
+      <ImageView fx:id="arkatamponkirmizi" fitHeight="35.0" fitWidth="108.0" layoutX="123.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/arkatamponkirmizi.png" />
+      </ImageView>
+      <ImageView fx:id="soloncamurlukkirmizi" fitHeight="72.0" fitWidth="49.0" layoutX="52.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/soloncamurlukkirmizi.png" />
+      </ImageView>
+      <ImageView fx:id="solonkapikirmizi" fitHeight="68.0" fitWidth="70.0" layoutX="59.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/solonkapikirmizi.png" />
+      </ImageView>
+      <ImageView fx:id="solarkacamurlukkirmizi" fitHeight="60.0" fitWidth="69.0" layoutX="57.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/solarkacamurlukkirmizi.png" />
+      </ImageView>
+      <ImageView fx:id="sagarkacamurlukkirmizi" fitHeight="58.0" fitWidth="51.0" layoutX="247.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/sagarkacamurlukkirmizi.png" />
+      </ImageView>
+      <ImageView fx:id="sagarkakapikirmizi" fitHeight="60.0" fitWidth="64.0" layoutX="236.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/sagarkakapikirmizi.png" />
+      </ImageView>
+      <ImageView fx:id="sagonkapikirmizi" fitHeight="64.0" fitWidth="62.0" layoutX="237.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/sagonkapikirmizi.png" />
+      </ImageView>
+      <ImageView fx:id="sagoncamurlukkirmizi" fitHeight="73.0" fitWidth="49.0" layoutX="255.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/sagoncamurlukkirmizi.png" />
+      </ImageView>
+      <ImageView fx:id="solarkakapikirmizi" fitHeight="64.0" fitWidth="65.0" layoutX="57.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <Image url="@../../../images/solarkakapikirmizi.png" />
+      </ImageView>
+   </Pane>
+   <Button fx:id="btArti" graphicTextGap="2.0" layoutX="316.0" layoutY="57.0" minWidth="22.0" mnemonicParsing="false" onAction="#onAddServisIslemi" prefHeight="28.0" prefWidth="32.0" text="+" />
+   <Button fx:id="btKaydet" layoutX="552.0" layoutY="474.0" mnemonicParsing="false" onAction="#onIslemKaydetButtonClick" text="İşlemleri Kaydet" />
+</AnchorPane>

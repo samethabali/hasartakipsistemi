@@ -1,0 +1,188 @@
+@startuml
+
+abstract class FileManager {
+    +dosyayaYaz() : void
+    +dosyadanOku() : void throws IOException
+}
+
+class HasarEkleEkraniController {
+    -Listeleme listeleme
+    -KazaFile kazaFile
+    -ListView<String> lv_hasarliparca
+    -Button bt_arti, bt_kaydet
+    -ChoiceBox<String> cb_kazaNedeni, cb_hasarliParca
+    -DatePicker dp_tarih
+    -ObservableList<String> items
+    -String tc, plaka
+    +initialize() : void
+    +onAddChoiceBox() : void
+    +onKaydetButtonClick() : void
+}
+
+class HasarTakipApplication {
+    +start(Stage stage) : void
+    +main(String[] args) : void
+}
+
+'Diğer sınıfların UML kodları
+class HelloController {
+    -String ref
+    -Button hasareklebuton
+    -Button hasarsorgulabuton
+    +onHasarEkleButtonClick() : void
+    +onHasarSorgulaButtonClick() : void
+    +onServisIslemleriButtonClick() : void
+    +sayfaYukle(String sayfaad, String sayfabaslik) : void
+}
+'Sınıflar arası oluşturulan ilişkiler
+
+class Kaza {
+    -String tarih
+    -String neden
+    -List<String> hasarliParcalar
+    -String maliyet
+    +Kaza(String tarih, String neden, List<String> hasarliParcalar, String maliyet)
+    +getTarih() : String
+    +setTarih(String tarih) : void
+    +getNeden() : String
+    +setNeden(String neden) : void
+    +getHasarliParcalar() : List<String>
+    +setHasarliParcalar(List<String> hasarliParcalar) : void
+    +getMaliyet() : String
+    +setMaliyet(String maliyet) : void
+    +toString() : String
+}
+
+class KazaFile {
+    -Listeleme listeleme
+    +KazaFile(Listeleme listeleme)
+    +dosyayaYaz() : void
+    +dosyadanOku() : void throws IOException
+    +plakaIleSorgula(String plaka) : List<Kaza>
+}
+
+class Listeleme {
+    -Map<String, Map<String, List<Kaza>>> aracKazalari
+    -Map<String, Map<String, List<ParcaSecimi>>> parcaSecimleri
+    +Listeleme()
+    +ekleKaza(String tc, String plaka, String tarih, String neden, List<String> hasarliParcalar, String maliyet) : void
+    +ekleParcaSecimi(String tc, String plaka, List<String> secilenParcalar, List<Integer> resimliSecilenParcalar) : void
+    +getAracKazalari() : Map<String, Map<String, List<Kaza>>>
+    +getParcaSecimleri() : Map<String, Map<String, List<ParcaSecimi>>>
+}
+
+class LoginController {
+    -TextField tcgiris
+    -TextField plakagiris
+    -Label hatalabel
+    +LoginController()
+    +onLoginButtonClick() : void
+    +onBackButtonClick() : void
+    -isNumeric(String tc) : boolean
+    +plakaDogruMu(String plaka) : boolean
+    +getAracBilgileriMap() : Map<String, String>
+}
+
+class ParcaSecimi {
+    -List<String> secilenParcalar
+    -List<Integer> resimliSecilenParcalar
+    +ParcaSecimi(List<String> secilenParcalar, List<Integer> resimliSecilenParcalar)
+    +getSecilenParcalar() : List<String>
+    +setSecilenParcalar(List<String> secilenParcalar) : void
+    +getResimliSecilenParcalar() : List<Integer>
+    +setResimliSecilenParcalar(List<Integer> resimliSecilenParcalar) : void
+    +toString() : String
+}
+
+interface PlakaKontrol {
+    +plakaDogruMu(String plaka) : boolean
+}
+
+class ServisFile {
+    -Listeleme listeleme
+    +ServisFile(Listeleme listeleme)
+    +dosyayaYaz() : void
+    +dosyadanOku() : void
+    +plakaIleSorgula(String plaka) : List<ParcaSecimi>
+}
+
+class ServisIslemleriController {
+    -Button btServisIslemiEkle
+    -Label lbServis
+    -ListView<String> lvServisGecmisi
+    -Listeleme listeleme
+    -ServisFile servisFile
+    -String tc
+    -String plaka
+    +ServisIslemleriController()
+    +initialize() : void
+    +initializeParts() : void
+    +onServisIslemiEkleButtonClick() : void
+    +onBackButtonClick() : void
+}
+
+class ServisIslemleriEkleController {
+    -ListView<String> lvservisislem
+    -ObservableList<String> items
+    -Button btArti
+    -Button btKaydet
+    -ChoiceBox<String> cbParcaSecimi
+    -Label lbAciklama
+    -Label lbHata
+    -TextField tfIslemAciklamasi
+    -Listeleme listeleme
+    -ServisFile servisFile
+    -LoginController loginController
+    -String tc
+    -String plaka
+    -List<ImageView> originalParts
+    -List<ImageView> yellowParts
+    -List<ImageView> redParts
+    +setLoginController(loginController: LoginController): void
+    +initialize() : void
+    +initializeParts() : void
+    +onImageClick(event: MouseEvent): void
+    +setVisibility(partName: String, colorName: String, index: int): void
+    +onAddServisIslemi() : void
+    +onIslemKaydetButtonClick() : void
+    +getresimliSecilenParcalar(yellowParts: List<ImageView>, redParts: List<ImageView>) : ArrayList<Integer>
+}
+
+class SorguController {
+    -TextField plakasorgugiris
+    -Label hatalabel
+    -ListView<String> lv_kazalar
+    -Listeleme listeleme
+    -KazaFile kazaFile
+    -ObservableList<String> kazaItems
+    +SorguController()
+    +initialize() : void
+    +onSorguButtonClick() : void
+    -plakaIleGoster(plaka : String) : void
+    +onBackButtonClick() : void
+    +plakaFormatKontrol(plaka : String) : boolean
+}
+
+HasarEkleEkraniController --> LoginController
+HasarEkleEkraniController --> Listeleme
+HasarEkleEkraniController --> KazaFile
+
+ServisIslemleriEkleController --> LoginController
+ServisIslemleriEkleController --> Listeleme
+ServisIslemleriEkleController --> ServisFile
+
+ServisIslemleriController --> Listeleme
+ServisIslemleriController --> ServisFile
+
+KazaFile --> Listeleme
+Listeleme --> Kaza : composition
+Listeleme --> ParcaSecimi : composition
+LoginController ..|> PlakaKontrol
+
+KazaFile ..|> FileManager
+ServisFile ..|> FileManager
+
+SorguController --> Listeleme : uses
+SorguController --> KazaFile : uses
+
+@enduml

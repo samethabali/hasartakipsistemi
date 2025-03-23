@@ -1,0 +1,130 @@
+/* Genel arka plan ve yazı stilleri */
+.root {
+    -fx-background-color: #cfdfe6;
+    -fx-font-family: 'Verdana', sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* Düğmeler */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #1c6071, #00868b);
+    -fx-text-fill: #ffffff;
+    /*-fx-padding: 10px 20px;*/
+    /*-fx-font-weight: bold;*/
+    -fx-font-family: 'Verdana', sans-serif;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);
+}
+.button:hover {
+    -fx-background-color: #104e8b;
+    -fx-font-family: 'Verdana', sans-serif;
+}
+.button:pressed {
+    -fx-background-color: #2e4a6e;
+    -fx-font-family: 'Verdana', sans-serif;
+}
+
+/* Metin Alanları (TextField ve PasswordField) */
+.text-field, .password-field {
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #cccccc;
+    -fx-font-family: 'Verdana', sans-serif;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #3c5b82;
+    -fx-border-width: 2px;
+    -fx-font-family: 'Verdana', sans-serif;
+}
+
+/* Etiketler (Label) */
+.label {
+    -fx-text-fill: #333333;
+    -fx-font-weight: 500;
+    -fx-font-family: 'Verdana', sans-serif;
+}
+
+/* Başlıklar (Heading tarzı) */
+.label.title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3c5b82;
+    -fx-font-family: 'Verdana', sans-serif;
+}
+
+/* Listeler (ListView ve TableView) */
+.list-view, .table-view {
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-font-family: 'Verdana', sans-serif;
+}
+.list-view .cell, .table-view .cell {
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-font-family: 'Verdana', sans-serif;
+}
+
+/* Sekme Paneli (TabPane) */
+.tab-pane {
+    -fx-background-color: #f4f4f9;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1px;
+    -fx-font-family: 'Verdana', sans-serif;
+}
+.tab {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #3c5b82;
+    -fx-font-family: 'Verdana', sans-serif;
+}
+.tab:selected {
+    -fx-background-color: #3c5b82;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: 'Verdana', sans-serif;
+}
+
+/* Kaydırma Çubuğu (ScrollBar) */
+.scroll-bar {
+    -fx-background-color: #eeeeee;
+}
+.scroll-bar .thumb {
+    -fx-background-color: #cccccc;
+    -fx-background-radius: 5px;
+}
+.scroll-bar .thumb:hover {
+    -fx-background-color: #bbbbbb;
+}
+
+/* Tooltip (Araç İpucu) */
+.tooltip {
+    -fx-background-color: #3c5b82;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* Menü (MenuBar) */
+.menu-bar {
+    -fx-background-color: #3c5b82;
+    -fx-text-fill: #ffffff;
+}
+.menu-item {
+    -fx-text-fill: #333333;
+}
+.menu-item:hover {
+    -fx-background-color: #eeeeee;
+}
+
+/* İlerleme Çubuğu (ProgressBar) */
+.progress-bar {
+    -fx-accent: #3c5b82;
+    -fx-background-color: #eeeeee;
+}
